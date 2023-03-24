@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+		<title>Login</title>
+		<link rel="stylesheet" href="./css/styles.css" />
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+			</header>
+		</div>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			  <div class="container-fluid">
+			    <a class="navbar-brand" href="#">PetShop</a>
+			    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			      <span class="navbar-toggler-icon"></span>
+			    </button>
+			
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+      				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				      <li class="nav-item active">
+				        <a class="nav-link" href="#">Inicio <span class="sr-only"></span></a>
+				      </li>
+				    </ul>
+			        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+				  </div>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="row">
+			    <div class="col-8">
+			    	<div class="flex-container">
+				    	<div class="card">
+						  <img src="http://d3ugyf2ht6aenh.cloudfront.net/stores/001/042/807/products/20181123051422-mini-adult-productbag1-07ccffcf2badbcf7bf15734879360293-640-0.webp" class="card-img-top" alt="miniadulto">
+						  <div class="card-body">
+						    <h5 class="card-title">Royal Canin MINI Adultos</h5>
+						    <p class="card-text">Bolsa de 3 kilos</p>
+						    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+						  </div>
+						</div>
+						<div class="card">
+						  <img src="https://kangoopet.com.ar/wp-content/uploads/2019/12/MAXI_ADULT_01.jpg" class="card-img-top" alt="maxi">
+						  <div class="card-body">
+						    <h5 class="card-title">Royal Canin MAXI</h5>
+						    <p class="card-text">Bolsa de 3 kilos</p>
+						    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+						  </div>
+						</div>
+						<div class="card">
+						  <img src="data:image/jpeg;base64,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" class="card-img-top" alt="bulldogfrances">
+						  <div class="card-body">
+						    <h5 class="card-title">Royal Canin Bulldog Francés Adulto</h5>
+						    <p class="card-text">Bolsa de 7.5 kilos</p>
+						    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+						  </div>
+						</div>
+					</div>
+			    </div>
+			</div>
+		</div>
+		<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		      </div>
+		      <div class="modal-body">
+		        <form id="form-login" th:action="@{/login/}" th:object="${userLoginModel}" method="POST">
+				  <div class="form-group">
+				    <label for="username">Usuario</label>
+				    <input type="text" class="form-control" id="username" placeholder="Ingresar usuario"  th:field="*{username}">
+				  </div>
+				  <div class="form-group">
+				    <label for="password">Contraseña</label>
+				    <input type="password" class="form-control" id="password" placeholder="Contrase&ntilde;a"  th:field="*{password}">
+				  </div>
+				  
+				</form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary" id="login-btn">Iniciar sesión</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+		<div class="container">
+			<footer>
+
+			</footer>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			     $('#login-btn').bind("click",function(){
+			    	 $("#form-login").submit();
+			     });
+			});
+		</script>
+	</body>
+</html>
+
+
